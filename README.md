@@ -3,14 +3,14 @@
 ## Installation
 
 ### Database
-  Go to `database` folder
+  From root, go to `database` folder
 
     cd database
     
   Import `task_monitoring_db.sql` database (PostgreSQL)
   
 ### API
-  Go to `api` folder
+  From root, go to `api` folder
   
     cd api
     

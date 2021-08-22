@@ -1,5 +1,12 @@
 # Task Monitoring
 
+## Specification
+
+- Node.js
+- Express.js
+- PostgreSQL
+- Sequelize
+
 ## Installation
 
 ### Database

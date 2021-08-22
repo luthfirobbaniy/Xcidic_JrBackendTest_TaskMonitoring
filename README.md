@@ -9,7 +9,7 @@
     
   Import `task_monitoring_db.sql` database (PostgreSQL)
   
-### Install API
+### API
   Go to `api` folder
   
     cd api
@@ -95,7 +95,7 @@ Use `"roleId": 0` for `Employee` user role
 
 ### Create Task - Employee Only (`POST`)
 
-Please register Employee user first!
+Please register `Employee` user first!
 
 #### URL:
 
@@ -105,13 +105,13 @@ Please register Employee user first!
 
 `userId` (Integer), `detail` (String)
 
-`userId` must be the id of the user with `Employee` role
+`userId` must be the `id` of `Employee` user
 
 #### Request body example:
 
     {
-      "username": "taskManager",
-      "password": "password",
+      "userId": 2,
+      "detail": "Rename project folder"
     }
     
 #### Output example:
@@ -124,7 +124,7 @@ Please register Employee user first!
 
 ### Get All Task - Manager Only (`GET`)
 
-Please register Manager user first!
+Please register `Manager` user first!
 
 #### URL:
 
@@ -134,7 +134,7 @@ Please register Manager user first!
 
 `userId` (Integer)
 
-`userId` must be the id of the user with `Manager` role
+`userId` must be the `id` of `Manager` user
 
 #### Request body example:
 
@@ -172,13 +172,13 @@ Please register Manager user first!
 
 ### Get Task - Employee Only (`GET`)
 
-Please register Employee user first!
+Please register `Employee` user first!
 
 #### URL:
 
     http://localhost:2000/task/user/:userId
-    
-`userId` must be the id of the user with Employee role   
+
+`userId` must be the `id` of `Employee` user
    
 URL example:
 
@@ -207,7 +207,7 @@ URL example:
 
 ### Edit Task - Employee Only (`PATCH`)
 
-Please register Employee user first!
+Please register `Employee` user first!
 
 #### URL:
 
@@ -220,10 +220,8 @@ URL Example:
 #### Body:
 
 `userId` (Integer), `detail` (String)
-    
-`userId` must be the id of the user with `Employee` role
 
-`userId` must be user yang memiliki task terikait
+`userId` must be the `id` of `Employee` user who has the related task
 
 #### Request body example:
 
@@ -242,7 +240,7 @@ URL Example:
 
 ### Delete Task - Employee Only (`DELETE`)
 
-Please register Employee user first!
+Please register `Employee` user first!
 
 #### URL:
 
@@ -255,10 +253,8 @@ URL Example:
 #### Body:
 
 `userId` (Integer)
-    
-`userId` must be the id of the user with `Employee` role
 
-`userId` must be user yang memiliki task terkait
+`userId` must be the `id` of `Employee` user who has the related task
 
 #### Request body example:
 
